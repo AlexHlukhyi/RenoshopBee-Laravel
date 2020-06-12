@@ -14,11 +14,13 @@ Route::group([
 });
 
 Route::get('categories', 'CategoryController@getCategories');
-
 Route::get('categories/{id}/products', 'ProductController@getProductsByCategoryId');
-
 Route::get('products/{id}', 'ProductController@getProductById');
-
 Route::get('products', 'ProductController@getPopularProducts');
-
 Route::get('search', 'ProductController@getProductsByName');
+
+Route::get('cart/{userId}/items', 'CartItemController@getProductsByUserId');
+Route::post('cart/add', 'CartItemController@add');
+Route::post('cart/remove', 'CartItemController@remove');
+
+Route::post('reviews/add', 'ReviewController@add');
