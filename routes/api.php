@@ -24,3 +24,5 @@ Route::post('cart/add', 'CartItemController@add');
 Route::post('cart/remove', 'CartItemController@remove');
 
 Route::post('reviews/add', 'ReviewController@add');
+
+Route::post('orders/add', 'OrderController@add');
